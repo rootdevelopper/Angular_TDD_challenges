@@ -1,0 +1,23 @@
+<mat-card class="typing-card">
+    <mat-card-header>
+      <mat-card-title>Typing Challenge</mat-card-title>
+      <mat-card-subtitle>Type as fast as you can! correctly</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="letters-container">
+        <span
+          *ngFor="let letter of randomText.split(''); let i = index"
+        >
+          {{ letter }}
+        </span>
+      </div>
+  
+      <div>
+        <input class="typing-editor" type="text" (input)="newLetter($event.target.value)" />
+      </div>
+      <div>
+        <h1>You win!</h1>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
